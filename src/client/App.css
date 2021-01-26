@@ -1,0 +1,26 @@
+#root{
+  margin: 30px;
+}
+body{
+  background-color: #33ccff;
+  position: relative;
+}
+
+.App {
+  text-align: center;
+
+}
+.logo-img{
+  height: 200px;
+}
+
+.cotainer-header{
+  height: 300px;
+}
+.header-text{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  color: #fff;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+}
