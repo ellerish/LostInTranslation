@@ -6,39 +6,11 @@ import './App.css';
 
 class Header extends React.Component {
 
-    constructor(props) {
-        super(props);
-
-        this.doLogout = this.doLogout.bind(this);
-    }
-
-    async doLogout(){
-
-        const url = "/api/logout";
-        let response;
-
-        try {
-            response = await fetch(url, {method: "post"});
-        } catch (err) {
-            alert("Failed to connect to server: "+ err);
-            return;
-        }
-
-        if(response.status !== 204){
-            alert("Error when connecting to server: status code "+ response.status);
-            return;
-        }
-
-        this.props.updateLoggedIn(null);
-        this.props.history.push('/');
-    }
-
 
     renderLoggedIn(userId){
         return(
             <div>
                 <h3>Welcome {userId}</h3>
-                <div className="btn" onClick={this.doLogout}>Log out</div>
             </div>
         );
     }
@@ -47,9 +19,7 @@ class Header extends React.Component {
         return (
             <div className="cotainer-header">
                 <img src={logo} alt="Logo" className="logo-img"/>
-                <p>Lost in translation</p>
-                <p>Get Stated</p>
-                <Link to="/login">Log In</Link>
+                <Link to="/logIn">Log In</Link>
             </div>
         );
     }
