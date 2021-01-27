@@ -3,6 +3,14 @@ const passport = require('passport');
 const Users = require('../db/users');
 const Tokens = require('./token');
 const router = jsonServer.Router();
+const app = jsonServer();
+
+const port = 8080;
+const server = require('http').Server(app);
+
+server.listen(port, () => {
+    console.log('Starting server on port ' + port);
+});
 
 router.post('/login', passport.authenticate('local'), (req, res) => {
 

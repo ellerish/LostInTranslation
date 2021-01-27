@@ -4,6 +4,8 @@
 body{
   background-color: #33ccff;
   position: relative;
+  background-attachment: fixed;
+
 }
 
 *{
@@ -19,18 +21,44 @@ body{
 }
 
 .cotainer-header{
-  height: 300px;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+  position: relative;
 }
 .header-text{
   font-family: 'Roboto', sans-serif;
   font-size: 1em;
   color: #fff;
-  border-bottom: 1px solid black;
-  padding-bottom: 5px;
+ 
+}
+
+.login-box{
+  padding: 3em;
+  margin: 3em;
 }
 
 .profile-header{
   float: right;
 
 }
+
+.btn-LogIn{
+  background-color: #4a7dcf;
+  color: white;
+  border: 2px solid #3c2faf;
+  font-size: 2em;
+  border-radius: 0.3em;
+  padding: 0.2em 1em; 
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  float: right;
+  margin: 1em;
+}
+
+.notLoggedInWelcome{
+  float: right;
+  position: relative;
+}
+
+
 

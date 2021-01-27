@@ -3,7 +3,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Header from "./Header"
 import Login from "./login/LogIn";
 import Home from "./Home";
-import Profil from "../client/profil/profil"
+import Profil from "./profil/Profil"
 
 import './App.css';
 
@@ -22,6 +22,7 @@ class App extends React.Component {
   updateLoggedIn(userId) {
     this.setState({userId: userId})
 }
+ 
 
 render(){
     return(

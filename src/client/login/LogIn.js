@@ -3,7 +3,6 @@ import { withRouter} from 'react-router-dom';
 
 import './LogIn.css';
 
-
 class Login extends React.Component {
     constructor(props) {
       super(props);
@@ -61,20 +60,22 @@ class Login extends React.Component {
       }
   
       return (
-        <div>
-          <div className="signup-container">
+
+          <div className="">
             <div>
               <p>Username :</p>
+              <from>
               <input
                 type="text"
                 value={this.state.userId}
                 onChange={this.onUserIdChange}
               />
-            </div>
-            {error}
-              <button className="btn-login" onClick={this.doLogIn}>
-                Log In
+        
+              <button className="btn-go" onClick={this.doLogIn}>
+                Go
               </button>
+              </from>
+              {error}
 
           </div>
         </div>

@@ -13,12 +13,11 @@ const TranslateSearch = (props) => {
         handleUserSearch(userInputs.toLowerCase());
     };
 
-
     return (
 
         <div>
             <input
-                placeholder="Type to translte"
+                placeholder="Type to translate"
                 onChange={onChangeTranslation}
             ></input>
             <button onClick={OnHandleUserSearch}>

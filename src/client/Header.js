@@ -29,8 +29,10 @@ class Header extends React.Component {
 
     renderNotLoggedIn() {
         return (
-            <div className="cotainer-header">
-                <Link to="/logIn">Log In</Link>
+            <div className="login-box">
+                <Link to="/logIn">
+                <h3 className="btn-LogIn">Log in</h3>
+                </Link>
                 <img src={logo} alt="Logo" className="logo-img"/>
             </div>
         );
@@ -47,9 +49,13 @@ class Header extends React.Component {
         }
 
         return(
-            <div className={"header"}>
-                <h1 className="header-text">Lost in Translation</h1>
-                {content}
+            <div className= "cotainer-header">
+                   {content}
+                <div className="header-text">
+                    <h1>Lost in Translation</h1>
+                </div>
+                
+             
             </div>
         );
     }

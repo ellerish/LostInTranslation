@@ -28,7 +28,7 @@ class Home extends React.Component {
                    ) : (
 
                        <div className="notLoggedInWelcome">
-                           <p>You need to login first</p>
+                           <p></p>
                        </div>
                    )}
               
