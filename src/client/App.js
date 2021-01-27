@@ -3,6 +3,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Header from "./Header"
 import Login from "./login/LogIn";
 import Home from "./Home";
+import Profil from "../client/profil/profil"
 
 import './App.css';
 
@@ -34,6 +35,8 @@ render(){
                                render={props => <Login {...props}
                                                        userId={this.state.userId}
                                                        updateLoggedIn={this.updateLoggedIn}/>}/>
+                       <Route exact path="/profil"
+                               render={props => <Profil {...props} userId={this.state.userId}/>}/>
                 </Switch>
             </div>
         </BrowserRouter>

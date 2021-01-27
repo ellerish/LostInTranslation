@@ -1,12 +1,9 @@
 import React from "react";
-import TranslateSearch from "../client/translate/TranslateSearch"
-
+import Translate from "../client/translate/Translate"
 
 class Home extends React.Component {
-
-
     render(){
-     
+    
          const userId = this.props.userId;
          const loggedIn = (userId !== null && userId !== undefined);
 
@@ -25,11 +22,7 @@ class Home extends React.Component {
                                
                            </h3>
 
-                           <TranslateSearch>
-
-                           </TranslateSearch>
-
-            
+                        <Translate></Translate>
                        </div>
 
                    ) : (

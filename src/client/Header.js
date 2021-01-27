@@ -1,16 +1,28 @@
 import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
-import logo from '../LostInTranslation_Resources/Logo-Hello.png';
+import  logo from '../img/Logo-Hello.png';
 import './App.css';
-
 
 class Header extends React.Component {
 
+    constructor(props) {
+        super(props);
+
+        this.doLogout = this.doLogout.bind(this);
+    }
+
+    async doLogout(){
+
+        this.props.updateLoggedIn(null);
+        this.props.history.push('/');
+    }
 
     renderLoggedIn(userId){
         return(
-            <div>
-                <h3>Welcome {userId}</h3>
+            <div className="profile-header">
+                <Link to="/profil">
+                <h3>{userId}</h3></Link>
+                <div className="btn" onClick={this.doLogout}>Log out</div>
             </div>
         );
     }
@@ -18,8 +30,8 @@ class Header extends React.Component {
     renderNotLoggedIn() {
         return (
             <div className="cotainer-header">
-                <img src={logo} alt="Logo" className="logo-img"/>
                 <Link to="/logIn">Log In</Link>
+                <img src={logo} alt="Logo" className="logo-img"/>
             </div>
         );
     }

@@ -21,7 +21,7 @@ class Login extends React.Component {
     doLogIn = async () => {
       const { userId } = this.state;
   
-      const url = " http://localhost:8080/users";
+      const url = "http://localhost:8080/users";
 
       const payload = { userId: userId};
   
