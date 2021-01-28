@@ -1,4 +1,5 @@
 import React   from "react";
+import SavedTranslations  from "./SavedTranslations"
 
 function Profil() {
   
@@ -6,6 +7,7 @@ function Profil() {
     
     return (
       <div className="">
+        <SavedTranslations></SavedTranslations>
       
       </div>
     )

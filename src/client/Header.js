@@ -13,12 +13,9 @@ class Header extends React.Component {
     }
 
     async doLogout(){
-
         this.props.updateLoggedIn(null);
-        this.props.history.push('/');
-       
+        this.props.history.push('/');     
     }
-
 
     renderLoggedIn(userId){
         return(
@@ -56,7 +53,9 @@ class Header extends React.Component {
                  <Row>
                  <Col>
                 <div className="header-text">
+                    <Link to="/">
                     <h1>Lost in Translation</h1>
+                    </Link>
                 </div>
                 </Col>
                      </Row>

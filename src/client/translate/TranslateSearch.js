@@ -5,14 +5,15 @@ import './Translate.css';
 const TranslateSearch = (props) => {
 
     const { handleUserSearch } = props;
-    const [userInputs, setTranslation] = useState('');
+    const [userInputs, setUserInputs] = useState('');
 
     const onChangeTranslation = (event) => {
-        setTranslation(event.target.value);
+        setUserInputs(event.target.value);
     };
 
     const OnHandleUserSearch = () => {
         handleUserSearch(userInputs.toLowerCase());
+       
     };
 
     return (
@@ -20,7 +21,6 @@ const TranslateSearch = (props) => {
         <div>
             <input className="input-box"
                 placeholder="Type to translate"
-                maxlength="40"
                 onChange={onChangeTranslation}
             ></input>
             <button onClick={OnHandleUserSearch} className="btn-go">

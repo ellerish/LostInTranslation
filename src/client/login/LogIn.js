@@ -73,6 +73,7 @@ class Login extends React.Component {
 
             <Row>
               <Col>
+              {error}
               </Col>
               <Col>
               <div className="form-login">
@@ -80,7 +81,6 @@ class Login extends React.Component {
               <input
                 placeholder="Username..."
                 type="text"
-                maxlength="30"
                 value={this.state.userId}
                 onChange={this.onUserIdChange}
               />
@@ -91,7 +91,6 @@ class Login extends React.Component {
               </div>
               </Col>
               <Col>
-              {error}
               </Col>
           </Row>
        

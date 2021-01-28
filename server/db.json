@@ -1,46 +1,30 @@
 {
   "users": [
     {
-      "userId": "Elise",
+      "userId": "e",
       "id": 1
     },
     {
-      "userId": "e",
+      "userId": "er",
       "id": 2
     },
     {
-      "userId": "El",
+      "userId": "er",
       "id": 3
     },
     {
-      "userId": "el",
+      "userId": "er",
       "id": 4
-    },
-    {
-      "userId": "eee",
-      "id": 5
-    },
-    {
-      "userId": "",
-      "id": 6
-    },
-    {
-      "userId": "",
-      "id": 7
-    },
-    {
-      "userId": "",
-      "id": 8
-    },
-    {
-      "userId": "h",
-      "id": 9
     }
   ],
-  "translation": [
+  "translations": [
+    {
+      "letters": "ee",
+      "id": 1
+    },
     {
       "letters": "elise",
-      "id": 1
+      "id": 2
     }
   ]
 }

@@ -8,3 +8,5 @@ The thirds javascript assignment for the Noroff .NET upskill course winter 2021.
 
 
 json-server server/db.json watch --port=8080
+json-server allows for customizations through middleware.
+json-server --watch server/db.json --middlewares server/server.js

@@ -9,21 +9,27 @@ class Translate extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            userInputs: ''
+            userInputs: '', 
+            errorMsg: null
         };
+
     }
     handleUserSearch = (letters) => {
         this.setState({ userInputs: letters});
+        
     }
+
+   // handleSavedSigns() 
+
     saveSigns = async () => {
+       
         const { userInputs  } = this.state;
     
-        const url = "http://localhost:8080/translation";
+        const url = "http://localhost:8080/translations";
   
         const payload = { letters: userInputs};
     
-        //let response;
-    
+  
         try {
            await fetch(url, {
             method: "POST",
@@ -32,12 +38,14 @@ class Translate extends React.Component {
             },
             body: JSON.stringify(payload)
           });
+          console.log(userInputs)
+          
         } catch (err) {
           this.setState({ errorMsg: "Failed to connect to server: " + err });
           return;
         }
-    
-        this.setState({ errorMsg: null });
+        this.setState({ errorMsg: null});
+       
       };
    
     render() {
@@ -51,8 +59,6 @@ class Translate extends React.Component {
 
             </TranslateSigns>
             <button onClick={this.saveSigns} className="btn-go">SAVE</button>
-
-
             </div>
 
         )

@@ -20,11 +20,20 @@
   font-family: 'Roboto', sans-serif;
   font-size: 1em;
   color: #fff;
-  border-bottom: 2px solid black;
+  border-bottom: 8px solid #FFC75F;
+  border-radius: 1em;
   margin: 2em;
  
 }
+/* Header
+YELLOW: #FFC75F
+YELLOW_DARK: #E7B355
+PURPLE: #845EC2
+*/
 
+.notLoggedInWelcome{
+  float: right;
+}
 
 .profile-header{
   float: right;
@@ -32,9 +41,9 @@
 }
 
 .btn-LogIn{
-  background-color: #4a7dcf;
+  background-color: #FFC75F;
   color: white;
-  border: 2px solid #3c2faf;
+  border: 2px solid #E7B355;
   font-size: 2em;
   border-radius: 0.3em;
   padding: 0.2em 1em; 
