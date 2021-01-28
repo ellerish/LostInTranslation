@@ -1,6 +1,8 @@
 import React from 'react';
 import TranslateSearch from './TranslateSearch';
 import TranslateSigns from './TranslateSigns';
+import './Translate.css';
+
 
 class Translate extends React.Component {
 
@@ -48,7 +50,7 @@ class Translate extends React.Component {
             <TranslateSigns letters={userInputs}>
 
             </TranslateSigns>
-            <button onClick={this.saveSigns}>SAVE</button>
+            <button onClick={this.saveSigns} className="btn-go">SAVE</button>
 
 
             </div>

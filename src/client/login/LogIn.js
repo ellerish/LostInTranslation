@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter} from 'react-router-dom';
+import { Col, Row } from 'react-bootstrap';
 
 import './LogIn.css';
 
@@ -14,7 +15,7 @@ class Login extends React.Component {
     }
   
     onUserIdChange = (event) => {
-      this.setState({ userId: event.target.value });
+      this.setState({ userId: event.target.value, errorMsg: null });
     };
   
     doLogIn = async () => {
@@ -58,27 +59,42 @@ class Login extends React.Component {
           </div>
         );
       }
+      
+      let noInputErr = <div />;
+      if (this.state.userId === "") {
+        noInputErr = (
+            <p>You need to enter username</p>
+         
+        );
+      }
+
   
       return (
 
-          <div className="">
-            <div>
-              <p>Username :</p>
-              <from>
+            <Row>
+              <Col>
+              </Col>
+              <Col>
+              <div className="form-login">
+          
               <input
+                placeholder="Username..."
                 type="text"
+                maxlength="30"
                 value={this.state.userId}
                 onChange={this.onUserIdChange}
               />
-        
-              <button className="btn-go" onClick={this.doLogIn}>
+              {noInputErr}
+              <button className="btn-go" onClick={this.doLogIn} disabled={this.state.userId.length<1}>
                 Go
               </button>
-              </from>
+              </div>
+              </Col>
+              <Col>
               {error}
-
-          </div>
-        </div>
+              </Col>
+          </Row>
+       
       );
     }
   }

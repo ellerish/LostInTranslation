@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import './Translate.css';
+
 
 const TranslateSearch = (props) => {
 
@@ -16,11 +18,12 @@ const TranslateSearch = (props) => {
     return (
 
         <div>
-            <input
+            <input className="input-box"
                 placeholder="Type to translate"
+                maxlength="40"
                 onChange={onChangeTranslation}
             ></input>
-            <button onClick={OnHandleUserSearch}>
+            <button onClick={OnHandleUserSearch} className="btn-go">
                 Go
         </button>
         </div>

@@ -1,8 +1,46 @@
 {
   "users": [
-
+    {
+      "userId": "Elise",
+      "id": 1
+    },
+    {
+      "userId": "e",
+      "id": 2
+    },
+    {
+      "userId": "El",
+      "id": 3
+    },
+    {
+      "userId": "el",
+      "id": 4
+    },
+    {
+      "userId": "eee",
+      "id": 5
+    },
+    {
+      "userId": "",
+      "id": 6
+    },
+    {
+      "userId": "",
+      "id": 7
+    },
+    {
+      "userId": "",
+      "id": 8
+    },
+    {
+      "userId": "h",
+      "id": 9
+    }
   ],
   "translation": [
- 
+    {
+      "letters": "elise",
+      "id": 1
+    }
   ]
 }

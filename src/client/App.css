@@ -1,15 +1,11 @@
 #root{
-  margin: 30px;
-}
-body{
-  background-color: #33ccff;
-  position: relative;
-  background-attachment: fixed;
-
+  margin: 2px;
 }
 
 *{
   box-sizing: border-box;
+  background-color: #33ccff;
+
 }
 
 .App {
@@ -20,22 +16,15 @@ body{
   height: 200px;
 }
 
-.cotainer-header{
-  border-bottom: 1px solid black;
-  padding-bottom: 5px;
-  position: relative;
-}
 .header-text{
   font-family: 'Roboto', sans-serif;
   font-size: 1em;
   color: #fff;
+  border-bottom: 2px solid black;
+  margin: 2em;
  
 }
 
-.login-box{
-  padding: 3em;
-  margin: 3em;
-}
 
 .profile-header{
   float: right;
@@ -55,10 +44,11 @@ body{
   margin: 1em;
 }
 
-.notLoggedInWelcome{
-  float: right;
-  position: relative;
+.login-box{
+  width: 50%
+
 }
+
 
 
 

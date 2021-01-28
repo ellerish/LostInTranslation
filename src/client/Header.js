@@ -2,6 +2,7 @@ import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import  logo from '../img/Logo-Hello.png';
 import './App.css';
+import { Container, Row, Col } from 'react-bootstrap';
 
 class Header extends React.Component {
 
@@ -15,14 +16,16 @@ class Header extends React.Component {
 
         this.props.updateLoggedIn(null);
         this.props.history.push('/');
+       
     }
+
 
     renderLoggedIn(userId){
         return(
             <div className="profile-header">
                 <Link to="/profil">
                 <h3>{userId}</h3></Link>
-                <div className="btn" onClick={this.doLogout}>Log out</div>
+                <div className="btn-LogOut" onClick={this.doLogout}>Log out</div>
             </div>
         );
     }
@@ -31,7 +34,7 @@ class Header extends React.Component {
         return (
             <div className="login-box">
                 <Link to="/logIn">
-                <h3 className="btn-LogIn">Log in</h3>
+                <button className="btn-LogIn" onClick={this.logIn}>Log in</button>
                 </Link>
                 <img src={logo} alt="Logo" className="logo-img"/>
             </div>
@@ -49,14 +52,21 @@ class Header extends React.Component {
         }
 
         return(
-            <div className= "cotainer-header">
-                   {content}
+            <Container>
+                 <Row>
+                 <Col>
                 <div className="header-text">
                     <h1>Lost in Translation</h1>
                 </div>
-                
+                </Col>
+                     </Row>
+                <Row>
+                 <Col>
+                {content}
+                </Col>
+                </Row>                
              
-            </div>
+            </Container>
         );
     }
 
