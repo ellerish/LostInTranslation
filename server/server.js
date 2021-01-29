@@ -2,6 +2,8 @@ const jsonServer = require('json-server')
 const server = jsonServer.create()
 const path = require('path')
 const router = jsonServer.router(path.join(__dirname, './db.json'))
+const authApi = require('./routes');
+
 
 //const middlewares = jsonServer.defaults()
 
@@ -14,6 +16,9 @@ server.use(router)
 server.listen(port, () => {
     console.log('listening on port 8080')
 })
+
+//--- Routes -----------
+server.use('/', authApi);
 
 //jsonServer.use(passport.initialize());
 //jsonServer.use(passport.session());
