@@ -16,7 +16,7 @@ function Translations() {
             <h1>My Saved Translations</h1>
             <p>{state.translations.length}</p>
             <ul>
-        {state.translations.map(t =>
+                 {state.translations.map(t =>
           <li key={t.id}>
               <p>{t.letters}</p>
           </li>

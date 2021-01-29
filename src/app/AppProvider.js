@@ -5,7 +5,7 @@ import { createContext, useReducer} from 'react'
 export const AppContext = createContext();
 
 export const ACTION_SET_TRANSLATIONS = 'translations:SET_TRANSLATIONS'
-export const ACTION_TRANSLATIONS_LOADING = 'translations: DELETE_TRANSLATIONS'
+export const ACTION_TRANSLATIONS_DELETE = 'translations: DELETE_TRANSLATIONS'
 
 function appReducer(state, action) {
     switch( action.type ) {
@@ -14,10 +14,10 @@ function appReducer(state, action) {
                 ...state, 
                 translations: [action.payload]
             }
-         case ACTION_TRANSLATIONS_LOADING:
+         case ACTION_TRANSLATIONS_DELETE:
              return{
                 ...state, 
-                loading: action.payload
+                translations: action.payload
              }
             default:
                 return state
@@ -33,6 +33,7 @@ export function AppProvider( props ) {
   const [state, dispatch] = useReducer(appReducer, initialState)
 
   const actions = {
+
     fetchTranslations () {
         const translations = fetch('http://localhost:8080/translations')
         .then(response => response.json())      
@@ -40,6 +41,7 @@ export function AppProvider( props ) {
             dispatch({ type: ACTION_SET_TRANSLATIONS, payload: translations})
         }
     }
+    
 
     return(
     <AppContext.Provider value= {[state, actions]}>

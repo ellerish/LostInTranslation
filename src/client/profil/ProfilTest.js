@@ -8,11 +8,12 @@ export class ProfilTest extends React.Component {
       this.state = {
         translations: []
       }
+      this.deleteSaved = this.deleteSaved.bind(this);
     }
     
-    async deleteSaved(id) {
+   deleteSaved(id) {
         const url = `http://localhost:8080/translations/${id}`
-          
+     
         try {
           fetch(url, {
             method: "DELETE",
@@ -24,6 +25,7 @@ export class ProfilTest extends React.Component {
           this.setState({ errorMsg: "Failed to connect to server: " + err });
           return;
         }
+     
     }
 
     componentDidMount() {
@@ -31,24 +33,33 @@ export class ProfilTest extends React.Component {
           .then(response => response.json())
           .then(translations => this.setState({ translations }));
       }
+
     render() {
-    let { translations } = this.state;
-      return (
+     let { translations } = this.state;
+
+     const showTanslations = (translations.length > 1)
+      
+     return (
         <div>
+            { showTanslations ? (
+                <div>
                 <ul>
                     {translations.map(t =>
                      <li key={t.id}>
                        <p>{t.letters}</p>
-                       <button onClick={this.deleteSaved(t.id)}>Slett</button>
                      <TranslateSigns letters={t.letters}></TranslateSigns>
+                     <button onClick={this.deleteSaved(t.id)}>Delete</button>
+
                       </li>
-                        )}
-             </ul>
+                        )}          
+                    </ul>
+                    </div>
+            ) : (
+                         <div>
+                             <p> You have no saved translations</p>
+                    </div>
 
-      
-
-
-
+            )}
         </div>
       )
     }
