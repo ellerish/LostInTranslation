@@ -1,17 +1,16 @@
 import React   from "react";
-import SavedTranslations  from "./SavedTranslations"
+import ProfilTest from "./ProfilTest"
+//import Translations from "./Translations";
 
 function Profil() {
-  
-  
-    
-    return (
-      <div className="">
-        <SavedTranslations></SavedTranslations>
-      
-      </div>
-    )
-  }
-  
-  export default Profil
-  
+
+  return(
+
+  <ProfilTest></ProfilTest>
+  )
+
+}
+
+
+ 
+export default Profil;

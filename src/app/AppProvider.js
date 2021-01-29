@@ -1,21 +1,23 @@
 //Global Store file.
 
-import { createContext, useReducer } from 'react'
+import { createContext, useReducer} from 'react'
 
-export const AppContext = createContext()
-export const ACTION_SET_TRANSLATIONS = 'translations: SET_TRANSLATIONS'
-export const ACTION_DELETE_TRANSLATIONS = 'translations: DELETE_TRANSLATIONS'
+export const AppContext = createContext();
+
+export const ACTION_SET_TRANSLATIONS = 'translations:SET_TRANSLATIONS'
+export const ACTION_TRANSLATIONS_LOADING = 'translations: DELETE_TRANSLATIONS'
 
 function appReducer(state, action) {
     switch( action.type ) {
         case ACTION_SET_TRANSLATIONS:
             return{
-                ...state,
-                translations: action.payload
+                ...state, 
+                translations: [action.payload]
             }
-         case ACTION_DELETE_TRANSLATIONS:
+         case ACTION_TRANSLATIONS_LOADING:
              return{
-
+                ...state, 
+                loading: action.payload
              }
             default:
                 return state
@@ -23,7 +25,8 @@ function appReducer(state, action) {
 }
 
 const initialState = {
-    translations: []
+    translations: [],
+    loading: false
 }
 
 export function AppProvider( props ) {
@@ -31,17 +34,16 @@ export function AppProvider( props ) {
 
   const actions = {
     fetchTranslations () {
-            const translations =  fetch('http://localhost:8080/translations')
-            .then(r => r.json())
-            dispatch({ type: 'ACTION_SET_TRANSLATIONS', payload:translations})
-     
+        const translations = fetch('http://localhost:8080/translations')
+        .then(response => response.json())      
+            
+            dispatch({ type: ACTION_SET_TRANSLATIONS, payload: translations})
+        }
     }
 
-  }
-
-        return(
-            <AppContext.Provider value= {[state, actions]}>
+    return(
+    <AppContext.Provider value= {[state, actions]}>
                 { props.children }    
-     </AppContext.Provider>
+        </AppContext.Provider>
     )
 }

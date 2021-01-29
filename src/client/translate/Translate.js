@@ -2,6 +2,8 @@ import React from 'react';
 import TranslateSearch from './TranslateSearch';
 import TranslateSigns from './TranslateSigns';
 import './Translate.css';
+import { Row, Col } from 'react-bootstrap';
+
 
 
 class Translate extends React.Component {
@@ -51,15 +53,19 @@ class Translate extends React.Component {
     render() {
         let {userInputs} = this.state;
         return (
-            <div>
+            <Row>
+              <Col>
             <TranslateSearch handleUserSearch={this.handleUserSearch}
             >  
             </TranslateSearch>
             <TranslateSigns letters={userInputs}>
 
             </TranslateSigns>
+            </Col>
+            <Col>
             <button onClick={this.saveSigns} className="btn-go">SAVE</button>
-            </div>
+            </Col>
+            </Row>
 
         )
 

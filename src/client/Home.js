@@ -15,7 +15,7 @@ class Home extends React.Component {
                    {loggedIn ? (
                     <Row>
                        <div className="">
-                     <h2>Let The Translation beggin</h2>
+                        <h2>Let The Translation beggin</h2>
 
                            <h3>
                                What do you want to translate?
