@@ -21,8 +21,6 @@ class Translate extends React.Component {
         
     }
 
-   // handleSavedSigns() 
-
     saveSigns = async () => {
        
         const { userInputs  } = this.state;
@@ -54,16 +52,19 @@ class Translate extends React.Component {
         let {userInputs} = this.state;
         return (
             <Row>
+              <Col></Col>
               <Col>
+              <h1 className="translation-header">Let the translations begin</h1>
             <TranslateSearch handleUserSearch={this.handleUserSearch}
             >  
             </TranslateSearch>
+            
             <TranslateSigns letters={userInputs}>
-
             </TranslateSigns>
+            <button onClick={this.saveSigns} className="btn-go" disabled={this.state.userInputs.length===0}>SAVE</button>
             </Col>
             <Col>
-            <button onClick={this.saveSigns} className="btn-go">SAVE</button>
+           
             </Col>
             </Row>
 

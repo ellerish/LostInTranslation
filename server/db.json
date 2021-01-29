@@ -1,9 +1,4 @@
 {
-  "users": [
-    {
-      "userId": "elise",
-      "id": 1
-    }
-  ],
+  "users": [],
   "translations": []
 }

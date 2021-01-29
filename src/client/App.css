@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+
 #root{
   margin: 2px;
 }
@@ -17,7 +19,7 @@
 }
 
 .header-text{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Love Ya Like A Sister', cursive;
   font-size: 1em;
   color: #fff;
   border-bottom: 8px solid #FFC75F;
@@ -32,7 +34,7 @@ PURPLE: #845EC2
 */
 
 .notLoggedInWelcome{
-  float: right;
+  text-align: center;
 }
 
 .profile-header{
@@ -47,7 +49,7 @@ PURPLE: #845EC2
   font-size: 2em;
   border-radius: 0.3em;
   padding: 0.2em 1em; 
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Love Ya Like A Sister', cursive;
   text-transform: uppercase;
   float: right;
   margin: 1em;

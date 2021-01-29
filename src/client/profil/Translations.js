@@ -22,14 +22,6 @@ function Translations() {
           </li>
         )}
       </ul>
-
-
-             
-
-         
-
-
-
             <p>Hei</p>
 
         </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import Translate from "../client/translate/Translate"
-import { Container, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 
 
 class Home extends React.Component {
@@ -10,35 +10,22 @@ class Home extends React.Component {
          const loggedIn = (userId !== null && userId !== undefined);
 
         return(
-           <Container>
-            
+           <Row>
                    {loggedIn ? (
-                    <Row>
-                       <div className="">
-                        <h2>Let The Translation beggin</h2>
-
-                           <h3>
-                               What do you want to translate?
-                               
-                           </h3>
-
-                        <Translate></Translate>
-                       </div>
-                       </Row>
-
-                    
+                    <Col>
+                        <Translate></Translate>        
+                       </Col>       
 
                    ) : (
-                        <Row>
-                       <div className="notLoggedInWelcome">
-                           <p>You need to log in</p>
-                       </div>
-                       </Row>
+                        <Col>
+                           <p className="notLoggedInWelcome">You need to log in</p>
+                       
+                       </Col>
                    )}
                   
 
 
-           </Container>
+           </Row>
 
         );
 

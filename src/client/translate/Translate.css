@@ -13,6 +13,16 @@
     font-size: 1.5em;
     border-radius: 0.3em;
     padding: 0.2em 1em; 
-    font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
+    font-family: 'Love Ya Like A Sister', cursive;
+
+}
+
+.translation-header{
+  font-family: 'Love Ya Like A Sister', cursive;
+  color: white;
+  font-size: 3em;
+  ;
+
+
 }
