@@ -7,25 +7,28 @@
 *{
   box-sizing: border-box;
   background-color: #33ccff;
-
+  font-family: 'Love Ya Like A Sister', cursive;
 }
 
 .App {
   text-align: center;
-
 }
+
 .logo-img{
   height: 200px;
+}
+.logo-logged-img{
+  height: 50px;
 }
 
 .header-text{
   font-family: 'Love Ya Like A Sister', cursive;
-  font-size: 1em;
-  color: #fff;
+  font-size: 2em;
+  color: #845EC2;
   border-bottom: 8px solid #FFC75F;
   border-radius: 1em;
-  margin: 2em;
- 
+  margin: 20px;
+  text-align: center;
 }
 /* Header
 YELLOW: #FFC75F
@@ -35,11 +38,11 @@ PURPLE: #845EC2
 
 .notLoggedInWelcome{
   text-align: center;
+    margin-top: -225px;
 }
 
 .profile-header{
   float: right;
-
 }
 
 .btn-LogIn{
@@ -55,10 +58,18 @@ PURPLE: #845EC2
   margin: 1em;
 }
 
-.login-box{
-  width: 50%
-
+.btn-LogOut{
+  background-color: #FFC75F;
+  color: white;
+  border: 1px solid #E7B355;
+  font-size: 0.5em;
+  border-radius: 0.3em;
+  padding: 0.2em 1em; 
+  font-family: 'Love Ya Like A Sister', cursive;
+  text-transform: uppercase;
+  margin: 1em;
 }
+
 
 
 

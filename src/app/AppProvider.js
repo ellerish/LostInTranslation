@@ -1,26 +1,22 @@
-//Global Store file.
-
-import { createContext, useReducer} from 'react'
-
+import { createContext, useReducer } from 'react'
 export const AppContext = createContext();
-
 export const ACTION_SET_TRANSLATIONS = 'translations:SET_TRANSLATIONS'
 export const ACTION_TRANSLATIONS_DELETE = 'translations: DELETE_TRANSLATIONS'
 
 function appReducer(state, action) {
-    switch( action.type ) {
+    switch (action.type) {
         case ACTION_SET_TRANSLATIONS:
-            return{
-                ...state, 
+            return {
+                ...state,
                 translations: [action.payload]
             }
-         case ACTION_TRANSLATIONS_DELETE:
-             return{
-                ...state, 
+        case ACTION_TRANSLATIONS_DELETE:
+            return {
+                ...state,
                 translations: action.payload
-             }
-            default:
-                return state
+            }
+        default:
+            return state
     }
 }
 
@@ -29,23 +25,23 @@ const initialState = {
     loading: false
 }
 
-export function AppProvider( props ) {
-  const [state, dispatch] = useReducer(appReducer, initialState)
+export function AppProvider(props) {
+    const [state, dispatch] = useReducer(appReducer, initialState)
 
-  const actions = {
+    const actions = {
 
-    fetchTranslations () {
-        const translations = fetch('http://localhost:8080/translations')
-        .then(response => response.json())      
-            
-            dispatch({ type: ACTION_SET_TRANSLATIONS, payload: translations})
+        fetchTranslations() {
+            const translations = fetch('http://localhost:8080/translations')
+                .then(response => response.json())
+
+            dispatch({ type: ACTION_SET_TRANSLATIONS, payload: translations })
         }
     }
-    
 
-    return(
-    <AppContext.Provider value= {[state, actions]}>
-                { props.children }    
+    return (
+        <AppContext.Provider value={[state, actions]}>
+            { props.children}
         </AppContext.Provider>
     )
 }
+

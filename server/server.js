@@ -4,9 +4,7 @@ const path = require('path')
 const router = jsonServer.router(path.join(__dirname, './db.json'))
 const authApi = require('./routes');
 
-
-//const middlewares = jsonServer.defaults()
-
+//const middlewares =
 //const passport = require('passport')
 //const strategy =require('passport-http').BaseStrategy;
 

@@ -52,20 +52,23 @@ class Translate extends React.Component {
         let {userInputs} = this.state;
         return (
             <Row>
-              <Col></Col>
               <Col>
               <h1 className="translation-header">Let the translations begin</h1>
+
             <TranslateSearch handleUserSearch={this.handleUserSearch}
             >  
-            </TranslateSearch>
             
+            </TranslateSearch>            
             <TranslateSigns letters={userInputs}>
             </TranslateSigns>
+
+            <div className= "saveSigns">
             <button onClick={this.saveSigns} className="btn-go" disabled={this.state.userInputs.length===0}>SAVE</button>
+            </div>
+                
             </Col>
-            <Col>
-           
-            </Col>
+            
+        
             </Row>
 
         )

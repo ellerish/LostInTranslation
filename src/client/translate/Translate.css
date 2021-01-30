@@ -3,11 +3,18 @@
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-    background-color:#ffff
+    background-color:#ffff;
+    border: 4px solid #845EC2;
+    border-radius: 1em;
+    font-size: 2em;
+  }
+
+  .translate-serach{
+    text-align: center 
   }
 
   .btn-go{
-    background-color: #FFC75F;
+  background-color: #FFC75F;
   color: white;
   border: 2px solid #E7B355;
     font-size: 1.5em;
@@ -20,9 +27,16 @@
 
 .translation-header{
   font-family: 'Love Ya Like A Sister', cursive;
-  color: white;
+  color: #845EC2;
   font-size: 3em;
-  ;
+  text-align: center;
+  margin: 1em;
+}
 
+.sign-box{
+  text-align: center;
 
+}
+.saveSigns{
+  text-align: center;
 }

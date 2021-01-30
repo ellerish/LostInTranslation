@@ -15,8 +15,6 @@ const TranslateSigns = (props) => {
      (
       <img key={index}  src={`../../LostInTrans/signs/${char}.png`} alt=""></img>    )
   );
-  return <div>{translatedLetters}
-  
-  </div>;
+  return <div className="sign-box">{translatedLetters} </div>;
 };
 export default TranslateSigns;

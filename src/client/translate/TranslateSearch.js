@@ -18,15 +18,15 @@ const TranslateSearch = (props) => {
 
     return (
 
-        <div>
+        <div className="translate-serach">
             <input className="input-box"
                 placeholder="Type to translate"
                 onChange={onChangeTranslation}
             ></input>
             <button onClick={OnHandleUserSearch} className="btn-go">
                 Go
-        </button>
-        </div>
+                 </button>
+         </div>
 
     );
 };
