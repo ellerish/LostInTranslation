@@ -20,16 +20,19 @@ function Test () {
     }
         
     };
-    useEffect(() => {
-        fetch('http://localhost:8080/translations')
-        .then(response => response.json())
-        .then(translations => setTranslations({ translations }));
 
-      });
+    useEffect(() => {
+       const result = fetch('http://localhost:8080/translations')
+        .then(response => response.json());
+        setTranslations(result.translations);
+      }, []);
+
+    
+      
 
    //return <div>{translatedLetters}</div>;
 
-     const showTanslations = (translations.length >  1)
+     const showTanslations = (translations.length > 1)
      
       
      return (

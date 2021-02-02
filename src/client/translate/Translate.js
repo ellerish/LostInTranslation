@@ -15,6 +15,8 @@ class Translate extends React.Component {
             errorMsg: null
         };
 
+        this.saveSigns = this.saveSigns.bind(this);
+
     }
     handleUserSearch = (letters) => {
         this.setState({ userInputs: letters});

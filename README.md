@@ -1,4 +1,4 @@
-# Lost in Translation
+# Lost in Translation Application
 
 ## Run:
 npm install
@@ -10,9 +10,5 @@ The thirds javascript assignment for the Noroff .NET upskill course winter 2021.
 - Manage state globally in a React application
 - Communicate with an API using React
 
-
-json-server server/db.json watch --port=8080
-json-server allows for customizations through middleware.
-json-server --watch server/db.json --middlewares server/server.js
 
 

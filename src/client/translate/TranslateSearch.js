@@ -25,7 +25,7 @@ const TranslateSearch = (props) => {
             ></input>
             <button onClick={OnHandleUserSearch} className="btn-go">
                 Go
-                 </button>
+            </button>
          </div>
 
     );
