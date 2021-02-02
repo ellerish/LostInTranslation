@@ -70,4 +70,4 @@ export class Profil extends React.Component {
   }
 }
 
-export default withRouter(Profil);
+export default withRouter(Profil)
