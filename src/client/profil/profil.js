@@ -1,11 +1,13 @@
 import React from "react";
-import ProfilTest from "./ProfilTest"
+//import ProfilTest from "./ProfilTest"
+import Translations from "./Translations"
 
 
 function Profil() {
     return (
         <div>
-            <ProfilTest></ProfilTest>          
+           
+            <Translations></Translations>      
         </div>
     );
 }

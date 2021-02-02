@@ -28,11 +28,10 @@ class Translate extends React.Component {
         const url = "http://localhost:8080/translations";
   
         const payload = { letters: userInputs};
-    
   
         try {
            await fetch(url, {
-            method: "POST",
+            method: "post",
             headers: {
               "Content-Type": "application/json"
             },

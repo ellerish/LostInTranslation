@@ -18,7 +18,7 @@ export class ProfilTest extends React.Component {
 
     try {
       fetch(url, {
-        method: "DELETE",
+        method: "delete",
         headers: {
           "Content-Type": "application/json"
         }
@@ -33,7 +33,7 @@ export class ProfilTest extends React.Component {
   componentDidMount() {
     fetch('http://localhost:8080/translations')
       .then(response => response.json())
-      .then(translations => this.setState({ translations }));
+      .then(translations => this.setState({ translations })); 
   }
 
   render() {

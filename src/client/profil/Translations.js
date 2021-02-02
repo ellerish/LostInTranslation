@@ -1,30 +1,22 @@
-import { useContext, useEffect } from 'react'
-import { AppContext} from '../../app/AppProvider.js'
-
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { signsFetchingAction } from "../../store/signAction";
+import SignsGrid from "../../store/SignsGrid";
 
 function Translations() {
+  const dispatch = useDispatch()
 
-    const [ state, actions ] = useContext(AppContext)
-   // console.log(state.translations.le)
 
-    useEffect(() => {
-        actions.fetchTranslations();
-      }, []);
+  useEffect(() => {
+      dispatch( signsFetchingAction() )
+  }, [ dispatch ])
 
-    return(
-        <div>
-            <h1>My Saved Translations</h1>
-            <p>{state.translations.length}</p>
-            <ul>
-                 {state.translations.map(t =>
-          <li key={t.id}>
-              <p>{t.letters}</p>
-          </li>
-        )}
-      </ul>
-            <p>Hei</p>
-
-        </div>
-    )
+  return (
+      <div>
+          <div>
+              <SignsGrid />
+          </div>
+      </div>
+  )
 }
 export default Translations
