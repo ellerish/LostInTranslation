@@ -2,7 +2,8 @@
 
 # Run:
 - npm install
--npm run dev 
+- npm run dev 
+- http://localhost:3000/
 
 ## The thirds javascript assignment for the Noroff .NET upskill course winter 2021. 
 - Create React applications using the React's CRA (create-react-app)

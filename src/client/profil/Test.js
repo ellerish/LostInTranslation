@@ -27,10 +27,6 @@ function Test () {
         setTranslations(result.translations);
       }, []);
 
-    
-      
-
-   //return <div>{translatedLetters}</div>;
 
      const showTanslations = (translations.length > 1)
      
